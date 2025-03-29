@@ -1,0 +1,36 @@
+:root {
+  --black: #171613;
+  --white: #fcebcd;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+/* Default CSS Grid for large screens (3 columns on laptops) */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+.item {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Responsive: 2 columns for tablets */
+@media (max-width: 768px) {
+  .container {
+      grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  }
+}
+
+/* Responsive: 1 column for mobile screens */
+@media (max-width: 480px) {
+  .container {
+      grid-template-columns: 1fr; /* 1 column */
+  }
+}
